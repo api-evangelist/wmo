@@ -79,6 +79,8 @@ apis:
         type: Documentation
       - url: https://wis2-gdc.weather.gc.ca
         type: OpenAPI
+      - url: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/openapi/wis2-global-discovery-catalogue-openapi.json
+        type: OpenAPI
     description: >-
       The WIS2 Global Discovery Catalogue (GDC) implements the OGC API - Records standard
       to provide discovery metadata for datasets published across the WMO Information

@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "wmo": "https://wmo.int/vocabulary/",
+    "ogc": "https://www.opengis.net/def/",
+    "hydra": "http://www.w3.org/ns/hydra/core#"
+  },
+  "@type": "DataCatalog",
+  "@id": "https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/apis.yml",
+  "name": "World Meteorological Organization",
+  "description": "The World Meteorological Organization (WMO) is a specialized agency of the United Nations that coordinates global meteorological, climatological, hydrological, and related geophysical sciences.",
+  "url": "https://wmo.int/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "World Meteorological Organization",
+    "url": "https://wmo.int/",
+    "sameAs": [
+      "https://twitter.com/WMO",
+      "https://www.linkedin.com/company/world-meteorological-organization-wmo/",
+      "https://github.com/World-Meteorological-Organization",
+      "https://github.com/wmo-im"
+    ]
+  },
+  "dataset": [
+    {
+      "@type": "WebAPI",
+      "@id": "https://worldweather.wmo.int/en/dataguide.html",
+      "name": "World Weather Information Service API",
+      "description": "The WMO World Weather Information Service (WWIS) provides public JSON endpoints delivering official city weather forecasts and climatological data contributed by WMO member national meteorological and hydrological services.",
+      "url": "https://worldweather.wmo.int/en/dataguide.html",
+      "documentation": "https://worldweather.wmo.int/en/dataguide.html",
+      "keywords": ["Weather", "Forecasts", "Climate"],
+      "provider": {
+        "@type": "Organization",
+        "name": "World Meteorological Organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://oscar.wmo.int/surface/",
+      "name": "OSCAR/Surface REST API",
+      "description": "The OSCAR/Surface REST API provides programmatic access to the WMO Observing Systems Capability Analysis and Review tool for surface-based stations.",
+      "url": "https://oscar.wmo.int/surface/",
+      "documentation": "https://oscar.wmo.int/surface/",
+      "keywords": ["Observations", "Weather Stations", "WIGOS", "Metadata"],
+      "provider": {
+        "@type": "Organization",
+        "name": "World Meteorological Organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://wis2-gdc.weather.gc.ca",
+      "name": "WIS2 Global Discovery Catalogue API",
+      "description": "The WIS2 Global Discovery Catalogue (GDC) implements the OGC API - Records standard to provide discovery metadata for datasets published across the WMO Information System 2.0 network.",
+      "url": "https://wis2-gdc.weather.gc.ca",
+      "documentation": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items",
+      "keywords": ["WIS2", "Discovery", "Metadata", "OGC", "Catalogue"],
+      "provider": {
+        "@type": "Organization",
+        "name": "Meteorological Service of Canada"
+      },
+      "conformsTo": "https://ogcapi.ogc.org/records/"
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/wmo-information-system-wis/wis2-overview",
+      "name": "WIS2 Global Broker (MQTT)",
+      "description": "The WIS2 Global Broker provides an MQTT(S) publish-subscribe service that re-publishes real-time weather notification messages from all WIS2 Nodes worldwide.",
+      "url": "mqtts://globalbroker.meteo.fr:8883",
+      "documentation": "https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/wmo-information-system-wis/wis2-overview",
+      "keywords": ["WIS2", "Real-time", "MQTT", "Pub/Sub", "Notifications"],
+      "provider": {
+        "@type": "Organization",
+        "name": "World Meteorological Organization"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://community.wmo.int/whos-web-services-and-supported-tools",
+      "name": "WHOS Hydrological Observing System API",
+      "description": "The WMO Hydrological Observing System (WHOS) provides multiple API interfaces for accessing global hydrological station data and time series.",
+      "url": "https://whos.geodab.eu/gs-service/services/essi",
+      "documentation": "https://community.wmo.int/whos-web-services-and-supported-tools",
+      "keywords": ["Hydrology", "Water", "Observations", "Time Series"],
+      "provider": {
+        "@type": "Organization",
+        "name": "World Meteorological Organization"
+      }
+    }
+  ]
+}
