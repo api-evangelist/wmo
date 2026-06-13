@@ -1,0 +1,53 @@
+finops:
+  model: Free / Open Public Good
+  description: >-
+    WMO API services are provided as a public good by the World Meteorological
+    Organization, a specialized agency of the United Nations, funded through
+    assessed contributions from its 193 member states and territories. All
+    documented public APIs are available at no cost to users. WMO operates
+    under a policy of open data exchange among member nations and promotes
+    free access to meteorological and hydrological data as foundational
+    infrastructure for weather, climate, and water services globally.
+
+  pricing:
+    - api: world-weather-information-service-api
+      cost: Free
+      notes: >-
+        No API key required. Attribution to WMO WWIS required per usage terms.
+        Contact webmaster@worldweather.org for commercial or high-volume use.
+
+    - api: oscar-surface-api
+      cost: Free
+      notes: >-
+        Public GET endpoints are free with no registration. Write access
+        requires a WIGOS Focal Point account, which is issued by WMO to
+        authorized national meteorological services at no charge.
+
+    - api: wis2-global-discovery-catalogue-api
+      cost: Free
+      notes: >-
+        Fully open, no authentication required. Operated as global WMO
+        infrastructure. Bulk archive downloads available for cost-efficient
+        full-catalogue access.
+
+    - api: wis2-global-broker-mqtt-api
+      cost: Free
+      notes: >-
+        Public read access via shared credentials. No account required.
+        WMO Resolution 1 mandates that core weather data be freely exchanged
+        among member states as a public service obligation.
+
+    - api: whos-hydrological-api
+      cost: Free (registration required)
+      notes: >-
+        Free personal token issued upon registration at the WHOS portal.
+        No subscription fee. Operated by GEODAB on behalf of WMO.
+
+  openDataPolicy:
+    url: https://wmo.int/activities/type-of-activity/exchange-data
+    description: >-
+      WMO Resolution 40 and Resolution 60 establish the principle of free and
+      unrestricted international exchange of meteorological and hydrological data.
+      WIS 2.0 (operational January 2025) codifies open data exchange as core
+      WMO policy, with core weather data mandated to be freely accessible
+      globally under WMO Resolution 1 (Cg-19, 2023).

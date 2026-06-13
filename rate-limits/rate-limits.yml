@@ -1,0 +1,68 @@
+rateLimits:
+  - api: world-weather-information-service-api
+    description: >-
+      WMO does not publish explicit rate limits for the WWIS JSON endpoints.
+      The service is a static JSON file delivery system (city data files are
+      pre-generated), so requests are served as cacheable static assets.
+      No throttling documentation has been published. Users are expected to
+      cache responses locally and poll at reasonable intervals rather than
+      making continuous high-frequency requests.
+    limits: []
+    notes: >-
+      Attribution to "WMO World Weather Information Service" is required per
+      usage guidelines. Contact webmaster@worldweather.org for high-volume or
+      commercial use inquiries.
+
+  - api: oscar-surface-api
+    description: >-
+      OSCAR/Surface REST API does not publish explicit rate limit policies.
+      The search endpoint returns up to 50,000 station records per response
+      with pagination support. WMO has noted API pagination changes in release
+      announcements via the WIGOS Learning Portal. Users should implement
+      polite crawling practices.
+    limits:
+      - type: response-size
+        value: 50000
+        unit: records
+        description: Maximum stations returned per search query
+    notes: >-
+      Pagination was added in a 2023 release. Monitor the WIGOS Learning Portal
+      (etrp.wmo.int) for API change notices.
+
+  - api: wis2-global-discovery-catalogue-api
+    description: >-
+      The WIS2 GDC (hosted by Meteorological Service of Canada using pygeoapi)
+      does not publish explicit rate limits. The limit query parameter controls
+      page size for paginated results. The service is built on open-source
+      pygeoapi and operates as a public infrastructure service; reasonable
+      pagination and caching is expected from API consumers.
+    limits:
+      - type: pagination
+        description: Use limit and offset parameters to paginate large result sets
+    notes: >-
+      A full daily metadata archive ZIP is available for bulk downloads,
+      which is preferable to repeated API calls for full catalogue enumeration.
+
+  - api: wis2-global-broker-mqtt-api
+    description: >-
+      The WIS2 Global Broker does not publish explicit subscription or message
+      rate limits. The public everyone/everyone credentials provide read-only
+      subscription access. WMO recommends using the pywis-pubsub or paho-mqtt
+      client libraries and filtering subscriptions to relevant topic hierarchies
+      rather than subscribing to all (#) topics.
+    limits: []
+    notes: >-
+      Multiple Global Broker instances are operated by different WMO members
+      (e.g., globalbroker.meteo.fr). Load distribution across brokers is
+      recommended for resilient applications.
+
+  - api: whos-hydrological-api
+    description: >-
+      WHOS does not publish explicit rate limit documentation. The service
+      is operated by GEODAB on behalf of WMO. Users require a registered
+      personal token and are expected to use the API for research and
+      operational hydrology purposes within fair-use boundaries.
+    limits: []
+    notes: >-
+      Contact the WHOS support team via community.wmo.int for high-volume
+      access requirements or questions about data use agreements.

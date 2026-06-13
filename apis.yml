@@ -1,0 +1,159 @@
+aid: wmo
+name: World Meteorological Organization
+description: >-
+  The World Meteorological Organization (WMO) is a specialized agency of the United Nations
+  that coordinates global meteorological, climatological, hydrological, and related geophysical
+  sciences. WMO provides public REST APIs for weather data, climate observation metadata,
+  hydrological monitoring, severe weather alerts, and the WIS2 global meteorological information
+  exchange system enabling real-time access to earth system data from member nations worldwide.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Weather
+  - Climate
+  - Hydrology
+  - Meteorology
+  - International Organization
+  - United Nations
+  - Open Data
+apis:
+  - aid: wmo:world-weather-information-service-api
+    name: World Weather Information Service API
+    tags:
+      - Weather
+      - Forecasts
+      - Climate
+    humanURL: https://worldweather.wmo.int/en/dataguide.html
+    baseURL: https://worldweather.wmo.int/en/json/
+    properties:
+      - url: https://worldweather.wmo.int/en/dataguide.html
+        type: Documentation
+    description: >-
+      The WMO World Weather Information Service (WWIS) provides public JSON endpoints
+      delivering official city weather forecasts and climatological data contributed
+      by WMO member national meteorological and hydrological services. Data is freely
+      accessible by city identifier with no authentication required. City forecasts
+      include temperature, wind, humidity, and precipitation; climatological normals
+      cover monthly averages. A full city list with identifiers is available for
+      programmatic enumeration of supported locations.
+
+  - aid: wmo:oscar-surface-api
+    name: OSCAR/Surface REST API
+    tags:
+      - Observations
+      - Weather Stations
+      - WIGOS
+      - Metadata
+    humanURL: https://oscar.wmo.int/surface/
+    baseURL: https://oscar.wmo.int/surface/rest/api
+    properties:
+      - url: https://oscar.wmo.int/surface/
+        type: Documentation
+      - url: https://oscar.wmo.int/surface/rest/api?_wadl
+        type: WADL
+    description: >-
+      The OSCAR/Surface REST API provides programmatic access to the WMO Observing Systems
+      Capability Analysis and Review tool for surface-based stations. The public GET endpoints
+      enable search and retrieval of station metadata records in JSON format covering WIGOS
+      station identifiers, station locations, observation variables, and operational status.
+      The search station endpoint supports pagination with up to 50,000 station records
+      per query. Authentication tokens are required for write (POST/XML upload) operations
+      but not for read access.
+
+  - aid: wmo:wis2-global-discovery-catalogue-api
+    name: WIS2 Global Discovery Catalogue API
+    tags:
+      - WIS2
+      - Discovery
+      - Metadata
+      - OGC
+      - Catalogue
+    humanURL: https://wis2-gdc.weather.gc.ca
+    baseURL: https://wis2-gdc.weather.gc.ca
+    properties:
+      - url: https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items
+        type: Documentation
+      - url: https://wis2-gdc.weather.gc.ca
+        type: OpenAPI
+    description: >-
+      The WIS2 Global Discovery Catalogue (GDC) implements the OGC API - Records standard
+      to provide discovery metadata for datasets published across the WMO Information
+      System 2.0 network. The primary hosted instance is operated by the Meteorological
+      Service of Canada (MSC). The API supports free-text search, spatial bounding-box
+      filtering (bbox), temporal filtering (ISO 8601 datetime), and pagination via limit
+      and offset parameters. Records conform to the WMO Core Metadata Profile 2 (WCMP2)
+      standard and are returned in GeoJSON or HTML. WIS2 officially entered operational
+      phase on January 1, 2025.
+
+  - aid: wmo:wis2-global-broker-mqtt-api
+    name: WIS2 Global Broker (MQTT)
+    tags:
+      - WIS2
+      - Real-time
+      - MQTT
+      - Pub/Sub
+      - Notifications
+    humanURL: https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/wmo-information-system-wis/wis2-overview
+    baseURL: mqtts://globalbroker.meteo.fr:8883
+    properties:
+      - url: https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/wmo-information-system-wis/wis2-overview
+        type: Documentation
+      - url: https://wmo-im.github.io/wis2-cookbook/cookbook/wis2-cookbook-DRAFT.html
+        type: GettingStarted
+    description: >-
+      The WIS2 Global Broker provides an MQTT(S) publish-subscribe service that
+      re-publishes real-time weather notification messages from all WIS2 Nodes worldwide.
+      Subscribers connect using MQTTS on port 8883 with public read-only credentials
+      (username: everyone, password: everyone). Notification messages include data
+      download links for core weather observations, forecasts, climate data, and alerts
+      exchanged between WMO member nations under the WIS2 topic hierarchy.
+
+  - aid: wmo:whos-hydrological-api
+    name: WHOS Hydrological Observing System API
+    tags:
+      - Hydrology
+      - Water
+      - Observations
+      - Time Series
+    humanURL: https://community.wmo.int/whos-web-services-and-supported-tools
+    baseURL: https://whos.geodab.eu/gs-service/services/essi
+    properties:
+      - url: https://community.wmo.int/whos-web-services-and-supported-tools
+        type: Documentation
+    description: >-
+      The WMO Hydrological Observing System (WHOS) provides multiple API interfaces
+      for accessing global hydrological station data and time series. Available services
+      include a REST/JSON DAB Observation and Measurement API, an OGC Sensor Observation
+      Service (SOS), CUAHSI WaterML endpoints for compatibility with HydroDesktop and R
+      WaterML libraries, and an ESRI Feature Server. All endpoints require a personal
+      access token obtained via free registration at the WHOS registration portal.
+      Supported views include whos-arctic, whos-plata, and the global whos view.
+
+common:
+  - type: Website
+    url: https://wmo.int/
+  - type: GitHubOrganization
+    url: https://github.com/World-Meteorological-Organization
+  - type: GitHubOrganization
+    url: https://github.com/wmo-im
+  - type: Community
+    url: https://community.wmo.int/
+  - type: Portal
+    url: https://wmo.int/activities/type-of-activity/exchange-data
+  - type: Documentation
+    url: https://docs.wis2box.wis.wmo.int/en/latest/
+  - type: SevereWeatherAlerts
+    url: https://severeweather.wmo.int/
+  - type: Twitter
+    url: https://twitter.com/WMO
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/world-meteorological-organization-wmo/
+  - type: TermsOfService
+    url: https://worldweather.wmo.int/en/dataguide.html
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
