@@ -136,6 +136,8 @@ apis:
       Supported views include whos-arctic, whos-plata, and the global whos view.
 
 common:
+  - type: DomainSecurity
+    url: security/wmo-domain-security.yml
   - type: Website
     url: https://wmo.int/
   - type: GitHubOrganization
