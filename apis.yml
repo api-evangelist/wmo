@@ -136,6 +136,8 @@ apis:
       Supported views include whos-arctic, whos-plata, and the global whos view.
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/wmo-agentic-access.yml
   - type: DomainSecurity
     url: security/wmo-domain-security.yml
   - type: Website
