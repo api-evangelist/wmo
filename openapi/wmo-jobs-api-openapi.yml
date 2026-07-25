@@ -1,0 +1,147 @@
+openapi: 3.0.2
+info:
+  contact:
+    name: GDC provider name
+    url: https://www.canada.ca/en/services/environment/weather.html
+    x-ogc-serviceContact:
+      addresses:
+      - administrativeArea: Canada
+        city: Fredericton
+        deliveryPoint:
+        - 77 Westmorland Street, Suite 260
+      contactInstructions: During hours of service
+      emails:
+      - value: tomkralidis@gmail.com
+      hoursOfService: host
+      links:
+      - href: https://weather.gc.ca/mainmenu/contact_us_e.html
+        type: text/html
+      name: Tom Kralidis
+      phones:
+      - type: main
+        value: None
+      - type: fax
+        value: +01-416-802-5741
+      position: ${WIS2_GDC_METADATA_CONTACT_POSITION:Position name}
+  description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
+  license:
+    name: WMO Unified Data Policy
+    url: https://library.wmo.int/idurl/4/58009
+  termsOfService: https://eccc-msc.github.io/open-data/usage-policy/readme_en
+  title: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs API
+  version: 0.23.3
+  x-keywords:
+  - wmo
+  - wis2
+  - gdc
+servers:
+- description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
+  url: https://wis2-gdc.weather.gc.ca
+tags:
+- name: jobs
+paths:
+  /jobs:
+    get:
+      description: Retrieve a list of jobs
+      operationId: getJobs
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/NotFound.yaml
+        default:
+          $ref: '#/components/responses/default'
+      summary: Retrieve jobs list
+      tags:
+      - jobs
+  /jobs/{jobId}:
+    delete:
+      description: Cancel / delete job
+      operationId: deleteJob
+      parameters:
+      - description: job identifier
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          $ref: '#/components/responses/204'
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/NotFound.yaml
+        default:
+          $ref: '#/components/responses/default'
+      summary: Cancel / delete job
+      tags:
+      - jobs
+    get:
+      description: Retrieve job details
+      operationId: getJob
+      parameters:
+      - description: job identifier
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/f'
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/NotFound.yaml
+        default:
+          $ref: '#/components/responses/default'
+      summary: Retrieve job details
+      tags:
+      - jobs
+  /jobs/{jobId}/results:
+    get:
+      description: Retrieve job results
+      operationId: getJobResults
+      parameters:
+      - description: job identifier
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: string
+      - $ref: '#/components/parameters/f'
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/NotFound.yaml
+        default:
+          $ref: '#/components/responses/default'
+      summary: Retrieve job results
+      tags:
+      - jobs
+components:
+  parameters:
+    f:
+      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
+      explode: false
+      in: query
+      name: f
+      required: false
+      schema:
+        default: json
+        enum:
+        - json
+        - html
+        - jsonld
+        type: string
+      style: form
+  responses:
+    '200':
+      description: successful operation
+    default:
+      content:
+        application/json:
+          schema:
+            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
+      description: Unexpected error
+    '204':
+      description: no content

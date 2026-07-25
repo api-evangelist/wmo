@@ -1,0 +1,685 @@
+openapi: 3.0.2
+info:
+  contact:
+    name: GDC provider name
+    url: https://www.canada.ca/en/services/environment/weather.html
+    x-ogc-serviceContact:
+      addresses:
+      - administrativeArea: Canada
+        city: Fredericton
+        deliveryPoint:
+        - 77 Westmorland Street, Suite 260
+      contactInstructions: During hours of service
+      emails:
+      - value: tomkralidis@gmail.com
+      hoursOfService: host
+      links:
+      - href: https://weather.gc.ca/mainmenu/contact_us_e.html
+        type: text/html
+      name: Tom Kralidis
+      phones:
+      - type: main
+        value: None
+      - type: fax
+        value: +01-416-802-5741
+      position: ${WIS2_GDC_METADATA_CONTACT_POSITION:Position name}
+  description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
+  license:
+    name: WMO Unified Data Policy
+    url: https://library.wmo.int/idurl/4/58009
+  termsOfService: https://eccc-msc.github.io/open-data/usage-policy/readme_en
+  title: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs wis2-discovery-metadata API
+  version: 0.23.3
+  x-keywords:
+  - wmo
+  - wis2
+  - gdc
+servers:
+- description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
+  url: https://wis2-gdc.weather.gc.ca
+tags:
+- description: WIS2 discovery metadata
+  name: wis2-discovery-metadata
+paths:
+  /collections/wis2-discovery-metadata:
+    get:
+      description: WIS2 discovery metadata
+      operationId: describeWis2-discovery-metadataCollection
+      parameters:
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/Collection
+        '400':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/NotFound
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Get WIS2 discovery metadata metadata
+      tags:
+      - wis2-discovery-metadata
+  /collections/wis2-discovery-metadata/items:
+    get:
+      description: WIS2 discovery metadata
+      operationId: getWis2-discovery-metadataFeatures
+      parameters:
+      - description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
+        explode: false
+        in: query
+        name: f
+        required: false
+        schema:
+          default: json
+          enum:
+          - json
+          - html
+          - jsonld
+          - csv
+          type: string
+        style: form
+      - $ref: '#/components/parameters/lang'
+      - $ref: '#/components/parameters/bbox'
+      - description: The optional limit parameter limits the number of items that are presented in the response document (maximum=1000, default=100).
+        explode: false
+        in: query
+        name: limit
+        required: false
+        schema:
+          default: 100
+          maximum: 1000
+          minimum: 1
+          type: integer
+        style: form
+      - $ref: '#/components/parameters/crs'
+      - $ref: '#/components/parameters/bbox-crs'
+      - description: The properties that should be included. The parameter value is a comma-separated list of property names.
+        explode: false
+        in: query
+        name: properties
+        required: false
+        schema:
+          items:
+            enum:
+            - centre-id
+            - contacts.addresses.administrativeArea
+            - contacts.addresses.city
+            - contacts.addresses.country
+            - contacts.addresses.deliveryPoint
+            - contacts.addresses.name
+            - contacts.addresses.postalCode
+            - contacts.contactInstructions
+            - contacts.emails.value
+            - contacts.hoursOfService
+            - contacts.identifier
+            - contacts.name
+            - contacts.organization
+            - contacts.phones.value
+            - contacts.position
+            - contacts.roles
+            - created
+            - description
+            - formats.name
+            - keywords
+            - language
+            - rights
+            - status.description
+            - status.id
+            - status.title
+            - themes.concepts.description
+            - themes.concepts.id
+            - themes.concepts.title
+            - themes.scheme
+            - title
+            - type
+            - updated
+            - wmo:dataPolicy
+            - time.resolution
+            type: string
+          type: array
+        style: form
+      - $ref: '#/components/parameters/vendorSpecificParameters'
+      - $ref: '#/components/parameters/skipGeometry'
+      - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/parameters/sortby.yaml
+      - $ref: '#/components/parameters/offset'
+      - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/parameters/q.yaml
+      - $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/parameters/datetime
+      - explode: false
+        in: query
+        name: centre-id
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.addresses.administrativeArea
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.addresses.city
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.addresses.country
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.addresses.deliveryPoint
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.addresses.name
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.addresses.postalCode
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.contactInstructions
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.emails.value
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.hoursOfService
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.identifier
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.name
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.organization
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.phones.value
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.position
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: contacts.roles
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: created
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: description
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: formats.name
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: keywords
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: language
+        required: false
+        schema:
+          type: object
+        style: form
+      - explode: false
+        in: query
+        name: rights
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: status.description
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: status.id
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: status.title
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: themes.concepts.description
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: themes.concepts.id
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: themes.concepts.title
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: themes.scheme
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: title
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: type
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: updated
+        required: false
+        schema:
+          format: date
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: wmo:dataPolicy
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: query
+        name: time.resolution
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/Features
+        '400':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/NotFound
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Get WIS2 discovery metadata items
+      tags:
+      - wis2-discovery-metadata
+    options:
+      description: WIS2 discovery metadata
+      operationId: optionsWis2-discovery-metadataFeatures
+      responses:
+        '200':
+          description: options response
+      summary: Options for WIS2 discovery metadata items
+      tags:
+      - wis2-discovery-metadata
+    post:
+      description: WIS2 discovery metadata
+      operationId: getCQL2Wis2-discovery-metadataFeatures
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: https://schemas.opengis.net/cql2/1.0/cql2.json
+        description: Get items with CQL2
+        required: true
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/Features
+        '400':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Get WIS2 discovery metadata items with CQL2
+      tags:
+      - wis2-discovery-metadata
+  /collections/wis2-discovery-metadata/items/{featureId}:
+    get:
+      description: WIS2 discovery metadata
+      operationId: getWis2-discovery-metadataFeature
+      parameters:
+      - $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/parameters/featureId
+      - $ref: '#/components/parameters/crs'
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/Feature
+        '400':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/NotFound
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Get WIS2 discovery metadata item by id
+      tags:
+      - wis2-discovery-metadata
+    options:
+      description: WIS2 discovery metadata
+      operationId: optionsWis2-discovery-metadataFeature
+      parameters:
+      - $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/parameters/featureId
+      responses:
+        '200':
+          description: options response
+      summary: Options for WIS2 discovery metadata item by id
+      tags:
+      - wis2-discovery-metadata
+  /collections/wis2-discovery-metadata/queryables:
+    get:
+      description: WIS2 discovery metadata
+      operationId: getWis2-discovery-metadataQueryables
+      parameters:
+      - description: The properties that should be included. The parameter value is a comma-separated list of property names.
+        explode: false
+        in: query
+        name: properties
+        required: false
+        schema:
+          items:
+            enum:
+            - centre-id
+            - contacts.addresses.administrativeArea
+            - contacts.addresses.city
+            - contacts.addresses.country
+            - contacts.addresses.deliveryPoint
+            - contacts.addresses.name
+            - contacts.addresses.postalCode
+            - contacts.contactInstructions
+            - contacts.emails.value
+            - contacts.hoursOfService
+            - contacts.identifier
+            - contacts.name
+            - contacts.organization
+            - contacts.phones.value
+            - contacts.position
+            - contacts.roles
+            - created
+            - description
+            - formats.name
+            - keywords
+            - language
+            - rights
+            - status.description
+            - status.id
+            - status.title
+            - themes.concepts.description
+            - themes.concepts.id
+            - themes.concepts.title
+            - themes.scheme
+            - title
+            - type
+            - updated
+            - wmo:dataPolicy
+            - time.resolution
+            type: string
+          type: array
+        style: form
+      - $ref: '#/components/parameters/f'
+      - description: The profile to be applied to a given request
+        explode: false
+        in: query
+        name: profile
+        required: false
+        schema:
+          enum:
+          - actual-domain
+          - valid-domain
+          type: string
+        style: form
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: '#/components/responses/Queryables'
+        '400':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/NotFound
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Get WIS2 discovery metadata queryables
+      tags:
+      - wis2-discovery-metadata
+  /collections/wis2-discovery-metadata/schema:
+    get:
+      description: WIS2 discovery metadata
+      operationId: getWis2-discovery-metadataSchema
+      parameters:
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: '#/components/responses/Queryables'
+        '400':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/NotFound
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Get WIS2 discovery metadata schema
+      tags:
+      - wis2-discovery-metadata
+components:
+  schemas:
+    queryable:
+      properties:
+        description:
+          description: a human-readable narrative describing the queryable
+          type: string
+        language:
+          default: en
+          description: the language used for the title and description
+          type: string
+        queryable:
+          description: the token that may be used in a CQL predicate
+          type: string
+        title:
+          description: a human readable title for the queryable
+          type: string
+        type:
+          description: the data type of the queryable
+          type: string
+        type-ref:
+          description: a reference to the formal definition of the type
+          format: url
+          type: string
+      required:
+      - queryable
+      - type
+      type: object
+    queryables:
+      properties:
+        queryables:
+          items:
+            $ref: '#/components/schemas/queryable'
+          type: array
+      required:
+      - queryables
+      type: object
+  parameters:
+    bbox-crs:
+      description: Indicates the coordinate reference system for the given bbox coordinates.
+      explode: false
+      in: query
+      name: bbox-crs
+      required: false
+      schema:
+        format: uri
+        type: string
+      style: form
+    skipGeometry:
+      description: This option can be used to skip response geometries for each feature.
+      explode: false
+      in: query
+      name: skipGeometry
+      required: false
+      schema:
+        default: false
+        type: boolean
+      style: form
+    bbox:
+      description: Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth).
+      explode: false
+      in: query
+      name: bbox
+      required: false
+      schema:
+        items:
+          type: number
+        maxItems: 6
+        minItems: 4
+        type: array
+      style: form
+    vendorSpecificParameters:
+      description: Additional "free-form" parameters that are not explicitly defined
+      in: query
+      name: vendorSpecificParameters
+      schema:
+        additionalProperties: true
+        type: object
+      style: form
+    f:
+      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
+      explode: false
+      in: query
+      name: f
+      required: false
+      schema:
+        default: json
+        enum:
+        - json
+        - html
+        - jsonld
+        type: string
+      style: form
+    crs:
+      description: Indicates the coordinate reference system for the results.
+      explode: false
+      in: query
+      name: crs
+      required: false
+      schema:
+        format: uri
+        type: string
+      style: form
+    lang:
+      description: The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.
+      in: query
+      name: lang
+      required: false
+      schema:
+        default: en-US
+        enum:
+        - en-US
+        type: string
+    offset:
+      description: The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default).
+      explode: false
+      in: query
+      name: offset
+      required: false
+      schema:
+        default: 0
+        minimum: 0
+        type: integer
+      style: form
+  responses:
+    Queryables:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/queryables'
+      description: successful queryables operation

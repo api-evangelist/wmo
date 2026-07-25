@@ -1,0 +1,272 @@
+openapi: 3.0.2
+info:
+  contact:
+    name: GDC provider name
+    url: https://www.canada.ca/en/services/environment/weather.html
+    x-ogc-serviceContact:
+      addresses:
+      - administrativeArea: Canada
+        city: Fredericton
+        deliveryPoint:
+        - 77 Westmorland Street, Suite 260
+      contactInstructions: During hours of service
+      emails:
+      - value: tomkralidis@gmail.com
+      hoursOfService: host
+      links:
+      - href: https://weather.gc.ca/mainmenu/contact_us_e.html
+        type: text/html
+      name: Tom Kralidis
+      phones:
+      - type: main
+        value: None
+      - type: fax
+        value: +01-416-802-5741
+      position: ${WIS2_GDC_METADATA_CONTACT_POSITION:Position name}
+  description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
+  license:
+    name: WMO Unified Data Policy
+    url: https://library.wmo.int/idurl/4/58009
+  termsOfService: https://eccc-msc.github.io/open-data/usage-policy/readme_en
+  title: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs pywcmp-wis2-wcmp2-ets API
+  version: 0.23.3
+  x-keywords:
+  - wmo
+  - wis2
+  - gdc
+servers:
+- description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
+  url: https://wis2-gdc.weather.gc.ca
+tags:
+- name: pywcmp-wis2-wcmp2-ets
+paths:
+  /processes/pywcmp-wis2-wcmp2-ets:
+    get:
+      description: Validate a WCMP2 document against the ETS
+      operationId: describePywcmp-wis2-wcmp2-etsProcess
+      parameters:
+      - $ref: '#/components/parameters/f'
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        default:
+          $ref: '#/components/responses/default'
+      summary: Get process metadata
+      tags:
+      - pywcmp-wis2-wcmp2-ets
+  /processes/pywcmp-wis2-wcmp2-ets/execution:
+    post:
+      description: Validate a WCMP2 document against the ETS
+      operationId: executePywcmp-wis2-wcmp2-etsJob
+      parameters:
+      - description: Indicates client preferences, including whether the client is capable of asynchronous processing.
+        in: header
+        name: Prefer
+        required: false
+        schema:
+          enum:
+          - respond-sync
+          - respond-async
+          type: string
+      requestBody:
+        content:
+          application/json:
+            example:
+              inputs:
+                fail_on_schema_validation: true
+                record:
+                  conformsTo:
+                  - http://wis.wmo.int/spec/wcmp/2/conf/core
+                  geometry:
+                    coordinates:
+                    - - - -180
+                        - -90
+                      - - -180
+                        - 90
+                      - - 180
+                        - 90
+                      - - 180
+                        - -90
+                      - - -180
+                        - -90
+                    type: Polygon
+                  id: urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps
+                  linkTemplates:
+                  - rel: data
+                    title: MSC Datamart
+                    type: text/html
+                    uriTemplate: https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/model_gem_global
+                    variables:
+                      yyyymmdd:
+                        description: date in yyyymmdd format
+                        type: string
+                  links:
+                  - href: https://open.canada.ca/en/open-government-licence-canada
+                    rel: license
+                    title: Open Government Licence - Canada
+                    type: text/html
+                  - href: https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT
+                    rel: service
+                    title: Air temperature [degrees]
+                    type: application/xml
+                  - channel: origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global
+                    href: mqtts://everyone:everyone@globalbroker.meteo.fr:8883
+                    rel: items
+                    title: Data notifications
+                    type: application/geo+json
+                  properties:
+                    contacts:
+                    - addresses:
+                      - administrativeArea: NB
+                        city: Fredericton
+                        country: CAN
+                        deliveryPoint:
+                        - 77 Westmorland Street, suite 260
+                        postalCode: E3B 6Z4
+                      contactInstructions: email
+                      emails:
+                      - value: enviroinfo@ec.gc.ca
+                      links:
+                      - href: https://www.canada.ca/en/environment-climate-change.html
+                        rel: canonical
+                        type: text/html
+                      name: National Inquiry Response Team
+                      organization: Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada
+                      phones:
+                      - value: '+18199972800'
+                      roles:
+                      - host
+                      - producer
+                    created: '2018-01-01T11:11:23Z'
+                    description: The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.
+                    language:
+                      code: en
+                    themes:
+                    - concepts:
+                      - id: Prediction
+                      - id: Global
+                      - id: Deterministic
+                      - id: Weather forecasts
+                      - id: Air temperature
+                      - id: Meteorological data
+                      scheme: https://canada.multites.net/cst
+                    - concepts:
+                      - id: weather
+                        title: Weather
+                        url: https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather
+                      scheme: https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline
+                    title: Global Deterministic Prediction System
+                    type: dataset
+                    updated: '2022-06-17T08:22:24Z'
+                    wmo:dataPolicy: core
+                  time:
+                    interval:
+                    - '1963-10-01'
+                    - ..
+                  type: Feature
+                relax_centre_id_checks: false
+            schema:
+              $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/execute.yaml
+        description: Mandatory execute request JSON
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                description: WCMP2 Executable Test Suite report
+                properties:
+                  datetime:
+                    format: date-time
+                    type: string
+                  generated_by:
+                    type: string
+                  id:
+                    format: uuid
+                    type: string
+                  metadata_id:
+                    type: string
+                  report_type:
+                    enum:
+                    - ets
+                    type: string
+                  summary:
+                    description: summary information
+                    properties:
+                      FAILED:
+                        type: integer
+                      PASSED:
+                        type: integer
+                      SKIPPED:
+                        type: integer
+                    required:
+                    - PASSED
+                    - FAILED
+                    - SKIPPED
+                    type: object
+                  tests:
+                    items:
+                      properties:
+                        code:
+                          enum:
+                          - PASSED
+                          - FAILED
+                          - SKIPPED
+                          type: string
+                        id:
+                          format: uri
+                          type: string
+                        message:
+                          type: string
+                      required:
+                      - id
+                      - code
+                      type: object
+                    type: array
+                required:
+                - id
+                - report_type
+                - summary
+                - generated_by
+                - datetime
+                - metadata_id
+                - tests
+                title: WCMP2 Executable Test Suite report
+                type: object
+          description: Process output schema
+        '201':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ExecuteAsync.yaml
+        '404':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/NotFound.yaml
+        '500':
+          $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ServerError.yaml
+        default:
+          $ref: '#/components/responses/default'
+      summary: Process WCMP2 ETS validator execution
+      tags:
+      - pywcmp-wis2-wcmp2-ets
+components:
+  responses:
+    '200':
+      description: successful operation
+    default:
+      content:
+        application/json:
+          schema:
+            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
+      description: Unexpected error
+  parameters:
+    f:
+      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
+      explode: false
+      in: query
+      name: f
+      required: false
+      schema:
+        default: json
+        enum:
+        - json
+        - html
+        - jsonld
+        type: string
+      style: form
