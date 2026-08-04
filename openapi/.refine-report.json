@@ -1,0 +1,22 @@
+{
+  "provider": "wmo",
+  "sources": [
+    "wmo-jobs-api-openapi.yml",
+    "wmo-pywcmp-wis2-wcmp2-ets-api-openapi.yml",
+    "wmo-pywcmp-wis2-wcmp2-kpi-api-openapi.yml",
+    "wmo-server-api-openapi.yml",
+    "wmo-wis2-discovery-metadata-api-openapi.yml"
+  ],
+  "outputs": [
+    "wmo-jobs-api-openapi.yml",
+    "wmo-pywcmp-wis2-wcmp2-ets-api-openapi.yml",
+    "wmo-pywcmp-wis2-wcmp2-kpi-api-openapi.yml",
+    "wmo-server-api-openapi.yml",
+    "wmo-wis2-discovery-metadata-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
