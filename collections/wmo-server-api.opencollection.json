@@ -1,0 +1,143 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs server API",
+    "version": "0.23.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "server",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Landing page",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "Landing page"
+        },
+        {
+          "info": {
+            "name": "Collections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/collections",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "Collections"
+        },
+        {
+          "info": {
+            "name": "API conformance definition",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/conformance",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "API conformance definition"
+        },
+        {
+          "info": {
+            "name": "This document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/openapi",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              },
+              {
+                "name": "ui",
+                "value": "",
+                "type": "query",
+                "description": "UI to render the OpenAPI document"
+              }
+            ]
+          },
+          "docs": "This document"
+        },
+        {
+          "info": {
+            "name": "Processes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/processes",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              }
+            ]
+          },
+          "docs": "Processes"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

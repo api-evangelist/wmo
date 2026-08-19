@@ -1,0 +1,2322 @@
+{
+  "item": [
+    {
+      "id": "0709c33b-6a32-4324-a0dd-9c49c87dc356",
+      "name": "wis2-discovery-metadata",
+      "description": {
+        "content": "WIS2 discovery metadata",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5176ba4c-f0c9-419b-8fd9-83ec1ae28b56",
+          "name": "Get WIS2 discovery metadata metadata",
+          "request": {
+            "name": "Get WIS2 discovery metadata metadata",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "33560ad9-abda-4e15-a4b8-0c32acf38310",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "56c43cc7-a203-4071-b732-b54910963d40",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "17f60901-2e3c-4f37-9155-52f71d7d3f32",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bff0092c-57c1-4a4e-a23d-6a511d903a64",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0a312703-7ee6-4de7-8bdb-361e046fe172",
+          "name": "Get WIS2 discovery metadata items",
+          "request": {
+            "name": "Get WIS2 discovery metadata items",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<number>,<number>,<number>,<number>",
+                  "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=1000, default=100)."
+                },
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox-crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the given bbox coordinates."
+                },
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "key_0",
+                  "value": "true",
+                  "description": "Additional \"free-form\" parameters that are not explicitly defined"
+                },
+                {
+                  "disabled": false,
+                  "key": "key_1",
+                  "value": "23",
+                  "description": "Additional \"free-form\" parameters that are not explicitly defined"
+                },
+                {
+                  "disabled": false,
+                  "key": "skipGeometry",
+                  "value": "false",
+                  "description": "This option can be used to skip response geometries for each feature."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+                },
+                {
+                  "disabled": false,
+                  "key": "centre-id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.addresses.administrativeArea",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.addresses.city",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.addresses.country",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.addresses.deliveryPoint",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.addresses.name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.addresses.postalCode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.contactInstructions",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.emails.value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.hoursOfService",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.identifier",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.organization",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.phones.value",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.position",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "contacts.roles",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "created",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "formats.name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "keywords",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "language",
+                  "value": "<object>"
+                },
+                {
+                  "disabled": false,
+                  "key": "rights",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status.description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status.id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "status.title",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "themes.concepts.description",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "themes.concepts.id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "themes.concepts.title",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "themes.scheme",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "title",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "updated",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "wmo:dataPolicy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time.resolution",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b7dc5f96-3f9d-4507-b032-77e3b08b1933",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "key_0",
+                      "value": "2695"
+                    },
+                    {
+                      "key": "key_1",
+                      "value": "true"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "centre-id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.administrativeArea",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.deliveryPoint",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.postalCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.contactInstructions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.emails.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.hoursOfService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.identifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.organization",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.phones.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.position",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.roles",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "created",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "formats.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "keywords",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "language",
+                      "value": "<object>"
+                    },
+                    {
+                      "key": "rights",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.scheme",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "updated",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "wmo:dataPolicy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time.resolution",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f3e84d4b-0b08-4311-ad02-fe73691383a3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "key_0",
+                      "value": "2695"
+                    },
+                    {
+                      "key": "key_1",
+                      "value": "true"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "centre-id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.administrativeArea",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.deliveryPoint",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.postalCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.contactInstructions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.emails.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.hoursOfService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.identifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.organization",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.phones.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.position",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.roles",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "created",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "formats.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "keywords",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "language",
+                      "value": "<object>"
+                    },
+                    {
+                      "key": "rights",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.scheme",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "updated",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "wmo:dataPolicy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time.resolution",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "71eb52e4-48f3-4b7a-b17e-13c18cef7604",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "key_0",
+                      "value": "2695"
+                    },
+                    {
+                      "key": "key_1",
+                      "value": "true"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "centre-id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.administrativeArea",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.deliveryPoint",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.postalCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.contactInstructions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.emails.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.hoursOfService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.identifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.organization",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.phones.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.position",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.roles",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "created",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "formats.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "keywords",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "language",
+                      "value": "<object>"
+                    },
+                    {
+                      "key": "rights",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.scheme",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "updated",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "wmo:dataPolicy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time.resolution",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "17b260b5-0dda-409a-976e-334c834ea5a1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<number>,<number>,<number>,<number>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "bbox-crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "key_0",
+                      "value": "2695"
+                    },
+                    {
+                      "key": "key_1",
+                      "value": "true"
+                    },
+                    {
+                      "key": "skipGeometry",
+                      "value": "false"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    },
+                    {
+                      "key": "centre-id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.administrativeArea",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.deliveryPoint",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.addresses.postalCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.contactInstructions",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.emails.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.hoursOfService",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.identifier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.organization",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.phones.value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.position",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "contacts.roles",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "created",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "formats.name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "keywords",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "language",
+                      "value": "<object>"
+                    },
+                    {
+                      "key": "rights",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "status.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.description",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.concepts.title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "themes.scheme",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "title",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "updated",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "wmo:dataPolicy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "time.resolution",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8210cb48-c194-4d52-838e-a4b31ef94849",
+          "name": "Options for WIS2 discovery metadata items",
+          "request": {
+            "name": "Options for WIS2 discovery metadata items",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77ca5f8b-4e22-4295-a8a4-b9ef56fe4c57",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "59b5b80c-924d-4a3f-b7b0-60eb41fa8be9",
+          "name": "Get WIS2 discovery metadata items with CQL2",
+          "request": {
+            "name": "Get WIS2 discovery metadata items with CQL2",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0bd1d7c7-ebee-4985-9b3b-cb7d5bfc5562",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1f02b78a-0310-4256-ace4-108e5ad69873",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0aa6ab38-4eea-4dfb-82e0-7748730d17e3",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "05599fc6-6d41-439a-9a8f-3ca6aab5b11d",
+          "name": "Get WIS2 discovery metadata item by id",
+          "request": {
+            "name": "Get WIS2 discovery metadata item by id",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "crs",
+                  "value": "<uri>",
+                  "description": "Indicates the coordinate reference system for the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "135203e4-722f-4514-9b9f-1b97dedfd4e5",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cc772ab3-6d65-40fa-abac-45943628d185",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "58f4d82c-3db4-437a-b057-81114726eb1a",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b77e422a-16b7-41cd-9bde-1f6335a225ce",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "crs",
+                      "value": "<uri>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "904e7451-104e-462b-ac80-6e57a24366d0",
+          "name": "Options for WIS2 discovery metadata item by id",
+          "request": {
+            "name": "Options for WIS2 discovery metadata item by id",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "items",
+                ":featureId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "OPTIONS",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1bd6932-c9f2-4e66-971d-d6d1bf3e1c2d",
+              "name": "options response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "items",
+                    ":featureId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "OPTIONS",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73ff43f3-1dae-4ed8-a39f-4896ee266bc0",
+          "name": "Get WIS2 discovery metadata queryables",
+          "request": {
+            "name": "Get WIS2 discovery metadata queryables",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "queryables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>,<string>",
+                  "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+                },
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "profile",
+                  "value": "<string>",
+                  "description": "The profile to be applied to a given request"
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa94b646-5aa4-4159-ad74-08279b433de5",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aba3ad38-15cc-45e1-bf2f-69cb61ffd0ed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1febb1c5-7dcc-407d-878a-3a8b7f885b7b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "44bd9b8f-5149-4c9f-bec7-a2df567e15a7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "queryables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "properties",
+                      "value": "<string>,<string>"
+                    },
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "profile",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "87b60a88-2d2f-4468-957b-2d007ab2ac29",
+          "name": "Get WIS2 discovery metadata schema",
+          "request": {
+            "name": "Get WIS2 discovery metadata schema",
+            "description": {
+              "content": "WIS2 discovery metadata",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "collections",
+                "wis2-discovery-metadata",
+                "schema"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                },
+                {
+                  "disabled": false,
+                  "key": "lang",
+                  "value": "en-US",
+                  "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "30443b21-4e66-4c6c-ae09-f44e21467061",
+              "name": "successful queryables operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"queryables\": [\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    },\n    {\n      \"queryable\": \"string\",\n      \"type\": \"string\",\n      \"description\": \"string\",\n      \"language\": \"en\",\n      \"title\": \"string\",\n      \"type-ref\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8b761b89-91e9-4e27-a924-004417b54e3b",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0d9ca277-c4f3-459f-8606-571e008b5d03",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fcbc8f63-0e1b-4de9-aad0-768dc6574389",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "collections",
+                    "wis2-discovery-metadata",
+                    "schema"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    },
+                    {
+                      "key": "lang",
+                      "value": "en-US"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://wis2-gdc.weather.gc.ca",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cf0dfefe-34d3-4066-b0a5-d855f1fed440",
+    "name": "Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs wis2-discovery-metadata API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Meteorological Service of Canada Global Discovery Catalogue (GDC)\n\nContact Support:\n Name: GDC provider name",
+      "type": "text/plain"
+    }
+  }
+}

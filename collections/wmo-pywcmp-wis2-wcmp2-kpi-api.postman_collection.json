@@ -1,0 +1,447 @@
+{
+  "item": [
+    {
+      "id": "db3b70cb-c169-4ca3-acfb-6ab221b291a4",
+      "name": "pywcmp-wis2-wcmp2-kpi",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "968a0dc8-acfc-4b02-b5c0-9ad9a7d7ba57",
+          "name": "Get process metadata",
+          "request": {
+            "name": "Get process metadata",
+            "description": {
+              "content": "Validate a WCMP2 document against the KPI suite",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "processes",
+                "pywcmp-wis2-wcmp2-kpi"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "f",
+                  "value": "json",
+                  "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8f794427-23aa-46ef-8c61-1db7dd98c7c0",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a03f7258-2825-44b3-ba62-aedbe58f6d5e",
+              "name": "Unexpected error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "f",
+                      "value": "json"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40471a0a-3704-469f-b938-161285ae0d86",
+          "name": "Process WCMP2 KPI evaluator execution",
+          "request": {
+            "name": "Process WCMP2 KPI evaluator execution",
+            "description": {
+              "content": "Validate a WCMP2 document against the KPI suite",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "processes",
+                "pywcmp-wis2-wcmp2-kpi",
+                "execution"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Indicates client preferences, including whether the client is capable of asynchronous processing.",
+                "key": "Prefer",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1da0a9ae-02f0-4c84-af4b-06e1ca4cb57c",
+              "name": "Process output schema",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi",
+                    "execution"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Indicates client preferences, including whether the client is capable of asynchronous processing.",
+                    "key": "Prefer",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"inputs\": {\n    \"record\": {\n      \"conformsTo\": [\n        \"http://wis.wmo.int/spec/wcmp/2/conf/core\"\n      ],\n      \"geometry\": {\n        \"coordinates\": [\n          [\n            [\n              -180,\n              -90\n            ],\n            [\n              -180,\n              90\n            ],\n            [\n              180,\n              90\n            ],\n            [\n              180,\n              -90\n            ],\n            [\n              -180,\n              -90\n            ]\n          ]\n        ],\n        \"type\": \"Polygon\"\n      },\n      \"id\": \"urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps\",\n      \"linkTemplates\": [\n        {\n          \"rel\": \"data\",\n          \"title\": \"MSC Datamart\",\n          \"type\": \"text/html\",\n          \"uriTemplate\": \"https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/model_gem_global\",\n          \"variables\": {\n            \"yyyymmdd\": {\n              \"description\": \"date in yyyymmdd format\",\n              \"type\": \"string\"\n            }\n          }\n        }\n      ],\n      \"links\": [\n        {\n          \"href\": \"https://open.canada.ca/en/open-government-licence-canada\",\n          \"rel\": \"license\",\n          \"title\": \"Open Government Licence - Canada\",\n          \"type\": \"text/html\"\n        },\n        {\n          \"href\": \"https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT\",\n          \"rel\": \"service\",\n          \"title\": \"Air temperature [degrees]\",\n          \"type\": \"application/xml\"\n        },\n        {\n          \"channel\": \"origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global\",\n          \"href\": \"mqtts://everyone:everyone@globalbroker.meteo.fr:8883\",\n          \"rel\": \"items\",\n          \"title\": \"Data notifications\",\n          \"type\": \"application/geo+json\"\n        }\n      ],\n      \"properties\": {\n        \"contacts\": [\n          {\n            \"addresses\": [\n              {\n                \"administrativeArea\": \"NB\",\n                \"city\": \"Fredericton\",\n                \"country\": \"CAN\",\n                \"deliveryPoint\": [\n                  \"77 Westmorland Street, suite 260\"\n                ],\n                \"postalCode\": \"E3B 6Z4\"\n              }\n            ],\n            \"contactInstructions\": \"email\",\n            \"emails\": [\n              {\n                \"value\": \"enviroinfo@ec.gc.ca\"\n              }\n            ],\n            \"links\": [\n              {\n                \"href\": \"https://www.canada.ca/en/environment-climate-change.html\",\n                \"rel\": \"canonical\",\n                \"type\": \"text/html\"\n              }\n            ],\n            \"name\": \"National Inquiry Response Team\",\n            \"organization\": \"Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada\",\n            \"phones\": [\n              {\n                \"value\": \"+18199972800\"\n              }\n            ],\n            \"roles\": [\n              \"host\",\n              \"producer\"\n            ]\n          }\n        ],\n        \"created\": \"2018-01-01T11:11:23Z\",\n        \"description\": \"The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.\",\n        \"language\": {\n          \"code\": \"en\"\n        },\n        \"themes\": [\n          {\n            \"concepts\": [\n              {\n                \"id\": \"Prediction\"\n              },\n              {\n                \"id\": \"Global\"\n              },\n              {\n                \"id\": \"Deterministic\"\n              },\n              {\n                \"id\": \"Weather forecasts\"\n              },\n              {\n                \"id\": \"Air temperature\"\n              },\n              {\n                \"id\": \"Meteorological data\"\n              }\n            ],\n            \"scheme\": \"https://canada.multites.net/cst\"\n          },\n          {\n            \"concepts\": [\n              {\n                \"id\": \"weather\",\n                \"title\": \"Weather\",\n                \"url\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather\"\n              }\n            ],\n            \"scheme\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline\"\n          }\n        ],\n        \"title\": \"Global Deterministic Prediction System\",\n        \"type\": \"dataset\",\n        \"updated\": \"2022-06-17T08:22:24Z\",\n        \"wmo:dataPolicy\": \"core\"\n      },\n      \"time\": {\n        \"interval\": [\n          \"1963-10-01\",\n          \"..\"\n        ]\n      },\n      \"type\": \"Feature\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"8ca4cd56-f9f1-c1d1-8183-64e3fb9180c7\",\n  \"report_type\": \"ets\",\n  \"summary\": {\n    \"grade\": \"D\"\n  },\n  \"generated_by\": \"string\",\n  \"datetime\": \"1977-05-19T19:31:03.784Z\",\n  \"metadata_id\": \"string\",\n  \"tests\": [\n    {\n      \"id\": \"http://nQRzTssdUsHfUKTjtPdYP.blvndUsztWuL2nf0Rj73-V.+udG2YPmp3kQuLltMIQHDJulavfAfzWhUd\",\n      \"title\": \"string\",\n      \"total\": 905.3885753513913,\n      \"score\": 3645,\n      \"percentage\": 7880\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b627ceab-02d0-4ade-ab07-0d257d1215a1",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi",
+                    "execution"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Indicates client preferences, including whether the client is capable of asynchronous processing.",
+                    "key": "Prefer",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"inputs\": {\n    \"record\": {\n      \"conformsTo\": [\n        \"http://wis.wmo.int/spec/wcmp/2/conf/core\"\n      ],\n      \"geometry\": {\n        \"coordinates\": [\n          [\n            [\n              -180,\n              -90\n            ],\n            [\n              -180,\n              90\n            ],\n            [\n              180,\n              90\n            ],\n            [\n              180,\n              -90\n            ],\n            [\n              -180,\n              -90\n            ]\n          ]\n        ],\n        \"type\": \"Polygon\"\n      },\n      \"id\": \"urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps\",\n      \"linkTemplates\": [\n        {\n          \"rel\": \"data\",\n          \"title\": \"MSC Datamart\",\n          \"type\": \"text/html\",\n          \"uriTemplate\": \"https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/model_gem_global\",\n          \"variables\": {\n            \"yyyymmdd\": {\n              \"description\": \"date in yyyymmdd format\",\n              \"type\": \"string\"\n            }\n          }\n        }\n      ],\n      \"links\": [\n        {\n          \"href\": \"https://open.canada.ca/en/open-government-licence-canada\",\n          \"rel\": \"license\",\n          \"title\": \"Open Government Licence - Canada\",\n          \"type\": \"text/html\"\n        },\n        {\n          \"href\": \"https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT\",\n          \"rel\": \"service\",\n          \"title\": \"Air temperature [degrees]\",\n          \"type\": \"application/xml\"\n        },\n        {\n          \"channel\": \"origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global\",\n          \"href\": \"mqtts://everyone:everyone@globalbroker.meteo.fr:8883\",\n          \"rel\": \"items\",\n          \"title\": \"Data notifications\",\n          \"type\": \"application/geo+json\"\n        }\n      ],\n      \"properties\": {\n        \"contacts\": [\n          {\n            \"addresses\": [\n              {\n                \"administrativeArea\": \"NB\",\n                \"city\": \"Fredericton\",\n                \"country\": \"CAN\",\n                \"deliveryPoint\": [\n                  \"77 Westmorland Street, suite 260\"\n                ],\n                \"postalCode\": \"E3B 6Z4\"\n              }\n            ],\n            \"contactInstructions\": \"email\",\n            \"emails\": [\n              {\n                \"value\": \"enviroinfo@ec.gc.ca\"\n              }\n            ],\n            \"links\": [\n              {\n                \"href\": \"https://www.canada.ca/en/environment-climate-change.html\",\n                \"rel\": \"canonical\",\n                \"type\": \"text/html\"\n              }\n            ],\n            \"name\": \"National Inquiry Response Team\",\n            \"organization\": \"Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada\",\n            \"phones\": [\n              {\n                \"value\": \"+18199972800\"\n              }\n            ],\n            \"roles\": [\n              \"host\",\n              \"producer\"\n            ]\n          }\n        ],\n        \"created\": \"2018-01-01T11:11:23Z\",\n        \"description\": \"The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.\",\n        \"language\": {\n          \"code\": \"en\"\n        },\n        \"themes\": [\n          {\n            \"concepts\": [\n              {\n                \"id\": \"Prediction\"\n              },\n              {\n                \"id\": \"Global\"\n              },\n              {\n                \"id\": \"Deterministic\"\n              },\n              {\n                \"id\": \"Weather forecasts\"\n              },\n              {\n                \"id\": \"Air temperature\"\n              },\n              {\n                \"id\": \"Meteorological data\"\n              }\n            ],\n            \"scheme\": \"https://canada.multites.net/cst\"\n          },\n          {\n            \"concepts\": [\n              {\n                \"id\": \"weather\",\n                \"title\": \"Weather\",\n                \"url\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather\"\n              }\n            ],\n            \"scheme\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline\"\n          }\n        ],\n        \"title\": \"Global Deterministic Prediction System\",\n        \"type\": \"dataset\",\n        \"updated\": \"2022-06-17T08:22:24Z\",\n        \"wmo:dataPolicy\": \"core\"\n      },\n      \"time\": {\n        \"interval\": [\n          \"1963-10-01\",\n          \"..\"\n        ]\n      },\n      \"type\": \"Feature\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ce452cad-d4dc-4c75-ba7c-99733cd0b7e8",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi",
+                    "execution"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Indicates client preferences, including whether the client is capable of asynchronous processing.",
+                    "key": "Prefer",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"inputs\": {\n    \"record\": {\n      \"conformsTo\": [\n        \"http://wis.wmo.int/spec/wcmp/2/conf/core\"\n      ],\n      \"geometry\": {\n        \"coordinates\": [\n          [\n            [\n              -180,\n              -90\n            ],\n            [\n              -180,\n              90\n            ],\n            [\n              180,\n              90\n            ],\n            [\n              180,\n              -90\n            ],\n            [\n              -180,\n              -90\n            ]\n          ]\n        ],\n        \"type\": \"Polygon\"\n      },\n      \"id\": \"urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps\",\n      \"linkTemplates\": [\n        {\n          \"rel\": \"data\",\n          \"title\": \"MSC Datamart\",\n          \"type\": \"text/html\",\n          \"uriTemplate\": \"https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/model_gem_global\",\n          \"variables\": {\n            \"yyyymmdd\": {\n              \"description\": \"date in yyyymmdd format\",\n              \"type\": \"string\"\n            }\n          }\n        }\n      ],\n      \"links\": [\n        {\n          \"href\": \"https://open.canada.ca/en/open-government-licence-canada\",\n          \"rel\": \"license\",\n          \"title\": \"Open Government Licence - Canada\",\n          \"type\": \"text/html\"\n        },\n        {\n          \"href\": \"https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT\",\n          \"rel\": \"service\",\n          \"title\": \"Air temperature [degrees]\",\n          \"type\": \"application/xml\"\n        },\n        {\n          \"channel\": \"origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global\",\n          \"href\": \"mqtts://everyone:everyone@globalbroker.meteo.fr:8883\",\n          \"rel\": \"items\",\n          \"title\": \"Data notifications\",\n          \"type\": \"application/geo+json\"\n        }\n      ],\n      \"properties\": {\n        \"contacts\": [\n          {\n            \"addresses\": [\n              {\n                \"administrativeArea\": \"NB\",\n                \"city\": \"Fredericton\",\n                \"country\": \"CAN\",\n                \"deliveryPoint\": [\n                  \"77 Westmorland Street, suite 260\"\n                ],\n                \"postalCode\": \"E3B 6Z4\"\n              }\n            ],\n            \"contactInstructions\": \"email\",\n            \"emails\": [\n              {\n                \"value\": \"enviroinfo@ec.gc.ca\"\n              }\n            ],\n            \"links\": [\n              {\n                \"href\": \"https://www.canada.ca/en/environment-climate-change.html\",\n                \"rel\": \"canonical\",\n                \"type\": \"text/html\"\n              }\n            ],\n            \"name\": \"National Inquiry Response Team\",\n            \"organization\": \"Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada\",\n            \"phones\": [\n              {\n                \"value\": \"+18199972800\"\n              }\n            ],\n            \"roles\": [\n              \"host\",\n              \"producer\"\n            ]\n          }\n        ],\n        \"created\": \"2018-01-01T11:11:23Z\",\n        \"description\": \"The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.\",\n        \"language\": {\n          \"code\": \"en\"\n        },\n        \"themes\": [\n          {\n            \"concepts\": [\n              {\n                \"id\": \"Prediction\"\n              },\n              {\n                \"id\": \"Global\"\n              },\n              {\n                \"id\": \"Deterministic\"\n              },\n              {\n                \"id\": \"Weather forecasts\"\n              },\n              {\n                \"id\": \"Air temperature\"\n              },\n              {\n                \"id\": \"Meteorological data\"\n              }\n            ],\n            \"scheme\": \"https://canada.multites.net/cst\"\n          },\n          {\n            \"concepts\": [\n              {\n                \"id\": \"weather\",\n                \"title\": \"Weather\",\n                \"url\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather\"\n              }\n            ],\n            \"scheme\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline\"\n          }\n        ],\n        \"title\": \"Global Deterministic Prediction System\",\n        \"type\": \"dataset\",\n        \"updated\": \"2022-06-17T08:22:24Z\",\n        \"wmo:dataPolicy\": \"core\"\n      },\n      \"time\": {\n        \"interval\": [\n          \"1963-10-01\",\n          \"..\"\n        ]\n      },\n      \"type\": \"Feature\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ec179e95-136e-4a61-96c8-59432101aa9e",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi",
+                    "execution"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Indicates client preferences, including whether the client is capable of asynchronous processing.",
+                    "key": "Prefer",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"inputs\": {\n    \"record\": {\n      \"conformsTo\": [\n        \"http://wis.wmo.int/spec/wcmp/2/conf/core\"\n      ],\n      \"geometry\": {\n        \"coordinates\": [\n          [\n            [\n              -180,\n              -90\n            ],\n            [\n              -180,\n              90\n            ],\n            [\n              180,\n              90\n            ],\n            [\n              180,\n              -90\n            ],\n            [\n              -180,\n              -90\n            ]\n          ]\n        ],\n        \"type\": \"Polygon\"\n      },\n      \"id\": \"urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps\",\n      \"linkTemplates\": [\n        {\n          \"rel\": \"data\",\n          \"title\": \"MSC Datamart\",\n          \"type\": \"text/html\",\n          \"uriTemplate\": \"https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/model_gem_global\",\n          \"variables\": {\n            \"yyyymmdd\": {\n              \"description\": \"date in yyyymmdd format\",\n              \"type\": \"string\"\n            }\n          }\n        }\n      ],\n      \"links\": [\n        {\n          \"href\": \"https://open.canada.ca/en/open-government-licence-canada\",\n          \"rel\": \"license\",\n          \"title\": \"Open Government Licence - Canada\",\n          \"type\": \"text/html\"\n        },\n        {\n          \"href\": \"https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT\",\n          \"rel\": \"service\",\n          \"title\": \"Air temperature [degrees]\",\n          \"type\": \"application/xml\"\n        },\n        {\n          \"channel\": \"origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global\",\n          \"href\": \"mqtts://everyone:everyone@globalbroker.meteo.fr:8883\",\n          \"rel\": \"items\",\n          \"title\": \"Data notifications\",\n          \"type\": \"application/geo+json\"\n        }\n      ],\n      \"properties\": {\n        \"contacts\": [\n          {\n            \"addresses\": [\n              {\n                \"administrativeArea\": \"NB\",\n                \"city\": \"Fredericton\",\n                \"country\": \"CAN\",\n                \"deliveryPoint\": [\n                  \"77 Westmorland Street, suite 260\"\n                ],\n                \"postalCode\": \"E3B 6Z4\"\n              }\n            ],\n            \"contactInstructions\": \"email\",\n            \"emails\": [\n              {\n                \"value\": \"enviroinfo@ec.gc.ca\"\n              }\n            ],\n            \"links\": [\n              {\n                \"href\": \"https://www.canada.ca/en/environment-climate-change.html\",\n                \"rel\": \"canonical\",\n                \"type\": \"text/html\"\n              }\n            ],\n            \"name\": \"National Inquiry Response Team\",\n            \"organization\": \"Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada\",\n            \"phones\": [\n              {\n                \"value\": \"+18199972800\"\n              }\n            ],\n            \"roles\": [\n              \"host\",\n              \"producer\"\n            ]\n          }\n        ],\n        \"created\": \"2018-01-01T11:11:23Z\",\n        \"description\": \"The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.\",\n        \"language\": {\n          \"code\": \"en\"\n        },\n        \"themes\": [\n          {\n            \"concepts\": [\n              {\n                \"id\": \"Prediction\"\n              },\n              {\n                \"id\": \"Global\"\n              },\n              {\n                \"id\": \"Deterministic\"\n              },\n              {\n                \"id\": \"Weather forecasts\"\n              },\n              {\n                \"id\": \"Air temperature\"\n              },\n              {\n                \"id\": \"Meteorological data\"\n              }\n            ],\n            \"scheme\": \"https://canada.multites.net/cst\"\n          },\n          {\n            \"concepts\": [\n              {\n                \"id\": \"weather\",\n                \"title\": \"Weather\",\n                \"url\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather\"\n              }\n            ],\n            \"scheme\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline\"\n          }\n        ],\n        \"title\": \"Global Deterministic Prediction System\",\n        \"type\": \"dataset\",\n        \"updated\": \"2022-06-17T08:22:24Z\",\n        \"wmo:dataPolicy\": \"core\"\n      },\n      \"time\": {\n        \"interval\": [\n          \"1963-10-01\",\n          \"..\"\n        ]\n      },\n      \"type\": \"Feature\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "72bef75f-0101-4067-a66e-f98558228509",
+              "name": "Unexpected error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "processes",
+                    "pywcmp-wis2-wcmp2-kpi",
+                    "execution"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Indicates client preferences, including whether the client is capable of asynchronous processing.",
+                    "key": "Prefer",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"inputs\": {\n    \"record\": {\n      \"conformsTo\": [\n        \"http://wis.wmo.int/spec/wcmp/2/conf/core\"\n      ],\n      \"geometry\": {\n        \"coordinates\": [\n          [\n            [\n              -180,\n              -90\n            ],\n            [\n              -180,\n              90\n            ],\n            [\n              180,\n              90\n            ],\n            [\n              180,\n              -90\n            ],\n            [\n              -180,\n              -90\n            ]\n          ]\n        ],\n        \"type\": \"Polygon\"\n      },\n      \"id\": \"urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps\",\n      \"linkTemplates\": [\n        {\n          \"rel\": \"data\",\n          \"title\": \"MSC Datamart\",\n          \"type\": \"text/html\",\n          \"uriTemplate\": \"https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/model_gem_global\",\n          \"variables\": {\n            \"yyyymmdd\": {\n              \"description\": \"date in yyyymmdd format\",\n              \"type\": \"string\"\n            }\n          }\n        }\n      ],\n      \"links\": [\n        {\n          \"href\": \"https://open.canada.ca/en/open-government-licence-canada\",\n          \"rel\": \"license\",\n          \"title\": \"Open Government Licence - Canada\",\n          \"type\": \"text/html\"\n        },\n        {\n          \"href\": \"https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT\",\n          \"rel\": \"service\",\n          \"title\": \"Air temperature [degrees]\",\n          \"type\": \"application/xml\"\n        },\n        {\n          \"channel\": \"origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global\",\n          \"href\": \"mqtts://everyone:everyone@globalbroker.meteo.fr:8883\",\n          \"rel\": \"items\",\n          \"title\": \"Data notifications\",\n          \"type\": \"application/geo+json\"\n        }\n      ],\n      \"properties\": {\n        \"contacts\": [\n          {\n            \"addresses\": [\n              {\n                \"administrativeArea\": \"NB\",\n                \"city\": \"Fredericton\",\n                \"country\": \"CAN\",\n                \"deliveryPoint\": [\n                  \"77 Westmorland Street, suite 260\"\n                ],\n                \"postalCode\": \"E3B 6Z4\"\n              }\n            ],\n            \"contactInstructions\": \"email\",\n            \"emails\": [\n              {\n                \"value\": \"enviroinfo@ec.gc.ca\"\n              }\n            ],\n            \"links\": [\n              {\n                \"href\": \"https://www.canada.ca/en/environment-climate-change.html\",\n                \"rel\": \"canonical\",\n                \"type\": \"text/html\"\n              }\n            ],\n            \"name\": \"National Inquiry Response Team\",\n            \"organization\": \"Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada\",\n            \"phones\": [\n              {\n                \"value\": \"+18199972800\"\n              }\n            ],\n            \"roles\": [\n              \"host\",\n              \"producer\"\n            ]\n          }\n        ],\n        \"created\": \"2018-01-01T11:11:23Z\",\n        \"description\": \"The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.\",\n        \"language\": {\n          \"code\": \"en\"\n        },\n        \"themes\": [\n          {\n            \"concepts\": [\n              {\n                \"id\": \"Prediction\"\n              },\n              {\n                \"id\": \"Global\"\n              },\n              {\n                \"id\": \"Deterministic\"\n              },\n              {\n                \"id\": \"Weather forecasts\"\n              },\n              {\n                \"id\": \"Air temperature\"\n              },\n              {\n                \"id\": \"Meteorological data\"\n              }\n            ],\n            \"scheme\": \"https://canada.multites.net/cst\"\n          },\n          {\n            \"concepts\": [\n              {\n                \"id\": \"weather\",\n                \"title\": \"Weather\",\n                \"url\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather\"\n              }\n            ],\n            \"scheme\": \"https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline\"\n          }\n        ],\n        \"title\": \"Global Deterministic Prediction System\",\n        \"type\": \"dataset\",\n        \"updated\": \"2022-06-17T08:22:24Z\",\n        \"wmo:dataPolicy\": \"core\"\n      },\n      \"time\": {\n        \"interval\": [\n          \"1963-10-01\",\n          \"..\"\n        ]\n      },\n      \"type\": \"Feature\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://wis2-gdc.weather.gc.ca",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "45f3c544-828a-4f7f-a30e-711efeb1a0c4",
+    "name": "Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs pywcmp-wis2-wcmp2-kpi API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Meteorological Service of Canada Global Discovery Catalogue (GDC)\n\nContact Support:\n Name: GDC provider name",
+      "type": "text/plain"
+    }
+  }
+}

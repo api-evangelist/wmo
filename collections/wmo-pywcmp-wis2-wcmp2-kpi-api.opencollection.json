@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs pywcmp-wis2-wcmp2-kpi API",
+    "version": "0.23.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "pywcmp-wis2-wcmp2-kpi",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get process metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/processes/pywcmp-wis2-wcmp2-kpi",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              }
+            ]
+          },
+          "docs": "Validate a WCMP2 document against the KPI suite"
+        },
+        {
+          "info": {
+            "name": "Process WCMP2 KPI evaluator execution",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://wis2-gdc.weather.gc.ca/processes/pywcmp-wis2-wcmp2-kpi/execution",
+            "headers": [
+              {
+                "name": "Prefer",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Validate a WCMP2 document against the KPI suite"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

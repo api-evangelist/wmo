@@ -1,0 +1,98 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs API",
+    "version": "0.23.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve jobs list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/jobs"
+          },
+          "docs": "Retrieve a list of jobs"
+        },
+        {
+          "info": {
+            "name": "Retrieve job details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/jobs/:jobId",
+            "params": [
+              {
+                "name": "jobId",
+                "value": "",
+                "type": "path",
+                "description": "job identifier"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              }
+            ]
+          },
+          "docs": "Retrieve job details"
+        },
+        {
+          "info": {
+            "name": "Cancel / delete job",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://wis2-gdc.weather.gc.ca/jobs/:jobId",
+            "params": [
+              {
+                "name": "jobId",
+                "value": "",
+                "type": "path",
+                "description": "job identifier"
+              }
+            ]
+          },
+          "docs": "Cancel / delete job"
+        },
+        {
+          "info": {
+            "name": "Retrieve job results",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/jobs/:jobId/results",
+            "params": [
+              {
+                "name": "jobId",
+                "value": "",
+                "type": "path",
+                "description": "job identifier"
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              }
+            ]
+          },
+          "docs": "Retrieve job results"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

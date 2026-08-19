@@ -1,0 +1,416 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs wis2-discovery-metadata API",
+    "version": "0.23.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "wis2-discovery-metadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get WIS2 discovery metadata metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Get WIS2 discovery metadata items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              },
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query",
+                "description": "Only features that have a geometry that intersects the bounding box are selected.The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth)."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The optional limit parameter limits the number of items that are presented in the response document (maximum=1000, default=100)."
+              },
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "bbox-crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the given bbox coordinates."
+              },
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "vendorSpecificParameters",
+                "value": "",
+                "type": "query",
+                "description": "Additional \"free-form\" parameters that are not explicitly defined"
+              },
+              {
+                "name": "skipGeometry",
+                "value": "",
+                "type": "query",
+                "description": "This option can be used to skip response geometries for each feature."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default)."
+              },
+              {
+                "name": "centre-id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.addresses.administrativeArea",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.addresses.city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.addresses.country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.addresses.deliveryPoint",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.addresses.name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.addresses.postalCode",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.contactInstructions",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.emails.value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.hoursOfService",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.identifier",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.organization",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.phones.value",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.position",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contacts.roles",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "created",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "formats.name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "keywords",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "language",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "rights",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status.description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status.id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status.title",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "themes.concepts.description",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "themes.concepts.id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "themes.concepts.title",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "themes.scheme",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "title",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "updated",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "wmo:dataPolicy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "time.resolution",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Get WIS2 discovery metadata items with CQL2",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Options for WIS2 discovery metadata items",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items"
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Get WIS2 discovery metadata item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items/:featureId",
+            "params": [
+              {
+                "name": "crs",
+                "value": "",
+                "type": "query",
+                "description": "Indicates the coordinate reference system for the results."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Options for WIS2 discovery metadata item by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "OPTIONS",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items/:featureId"
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Get WIS2 discovery metadata queryables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/queryables",
+            "params": [
+              {
+                "name": "properties",
+                "value": "",
+                "type": "query",
+                "description": "The properties that should be included. The parameter value is a comma-separated list of property names."
+              },
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "profile",
+                "value": "",
+                "type": "query",
+                "description": "The profile to be applied to a given request"
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "WIS2 discovery metadata"
+        },
+        {
+          "info": {
+            "name": "Get WIS2 discovery metadata schema",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/schema",
+            "params": [
+              {
+                "name": "f",
+                "value": "",
+                "type": "query",
+                "description": "The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON."
+              },
+              {
+                "name": "lang",
+                "value": "",
+                "type": "query",
+                "description": "The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. \"fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7\"), simple (e.g. \"de\") or locale-like (e.g. \"de-CH\" or \"fr_BE\") fashion."
+              }
+            ]
+          },
+          "docs": "WIS2 discovery metadata"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
