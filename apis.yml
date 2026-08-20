@@ -37,6 +37,10 @@ apis:
   name: World Weather Information Service API
   tags:
   - Weather
+  - Forecast
+  - Climate
+  tags_raw:
+  - Weather
   - Forecasts
   - Climate
   humanURL: https://worldweather.wmo.int/en/dataguide.html
@@ -75,6 +79,12 @@ apis:
 - aid: wmo:wis2-global-broker-mqtt-api
   name: WIS2 Global Broker (MQTT)
   tags:
+  - WIS2
+  - Real-Time
+  - MQTT
+  - Pub-Sub
+  - Notification
+  tags_raw:
   - WIS2
   - Real-time
   - MQTT
@@ -120,6 +130,8 @@ apis:
   humanURL: https://worldweather.wmo.int/en/dataguide.html
   baseURL: https://worldweather.wmo.int/en/json/
   tags:
+  - Job
+  tags_raw:
   - jobs
   properties:
   - type: OpenAPI
@@ -158,6 +170,8 @@ apis:
   humanURL: https://worldweather.wmo.int/en/dataguide.html
   baseURL: https://worldweather.wmo.int/en/json/
   tags:
+  - Server
+  tags_raw:
   - server
   properties:
   - type: OpenAPI
