@@ -1,4 +1,4 @@
-openapi: 3.0.2
+openapi: 3.2.0
 info:
   contact:
     name: GDC provider name
@@ -28,7 +28,7 @@ info:
     name: WMO Unified Data Policy
     url: https://library.wmo.int/idurl/4/58009
   termsOfService: https://eccc-msc.github.io/open-data/usage-policy/readme_en
-  title: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs server API
+  title: Meteorological Service of Canada Global Discovery Catalogue…
   version: 0.23.3
   x-keywords:
   - wmo
@@ -42,11 +42,10 @@ tags:
   externalDocs:
     description: information
     url: https://eccc-msc.github.io/open-data/wmo-wis2/readme_en
-  name: server
+  name: Server
 paths:
   /:
     get:
-      description: Landing page
       operationId: getLandingPage
       parameters:
       - $ref: '#/components/parameters/f'
@@ -60,10 +59,9 @@ paths:
           $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
       summary: Landing page
       tags:
-      - server
+      - Server
   /collections:
     get:
-      description: Collections
       operationId: getCollections
       parameters:
       - $ref: '#/components/parameters/f'
@@ -77,10 +75,9 @@ paths:
           $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
       summary: Collections
       tags:
-      - server
+      - Server
   /conformance:
     get:
-      description: API conformance definition
       operationId: getConformanceDeclaration
       parameters:
       - $ref: '#/components/parameters/f'
@@ -94,10 +91,9 @@ paths:
           $ref: https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
       summary: API conformance definition
       tags:
-      - server
+      - Server
   /openapi:
     get:
-      description: This document
       operationId: getOpenapi
       parameters:
       - $ref: '#/components/parameters/f'
@@ -123,10 +119,9 @@ paths:
           $ref: '#/components/responses/default'
       summary: This document
       tags:
-      - server
+      - Server
   /processes:
     get:
-      description: Processes
       operationId: getProcesses
       parameters:
       - $ref: '#/components/parameters/f'
@@ -137,7 +132,7 @@ paths:
           $ref: '#/components/responses/default'
       summary: Processes
       tags:
-      - server
+      - Server
 components:
   parameters:
     lang:
@@ -165,11 +160,11 @@ components:
         type: string
       style: form
   responses:
-    '200':
-      description: successful operation
     default:
       content:
         application/json:
           schema:
             $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
       description: Unexpected error
+    '200':
+      description: successful operation

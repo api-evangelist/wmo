@@ -1,4 +1,4 @@
-openapi: 3.0.2
+openapi: 3.2.0
 info:
   contact:
     name: GDC provider name
@@ -28,7 +28,7 @@ info:
     name: WMO Unified Data Policy
     url: https://library.wmo.int/idurl/4/58009
   termsOfService: https://eccc-msc.github.io/open-data/usage-policy/readme_en
-  title: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs pywcmp-wis2-wcmp2-ets API
+  title: Meteorological Service of Canada Global Discovery Catalogue…
   version: 0.23.3
   x-keywords:
   - wmo
@@ -247,14 +247,14 @@ paths:
       - pywcmp-wis2-wcmp2-ets
 components:
   responses:
-    '200':
-      description: successful operation
     default:
       content:
         application/json:
           schema:
             $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
       description: Unexpected error
+    '200':
+      description: successful operation
   parameters:
     f:
       description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.

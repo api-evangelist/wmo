@@ -1,4 +1,4 @@
-openapi: 3.0.2
+openapi: 3.2.0
 info:
   contact:
     name: GDC provider name
@@ -28,7 +28,7 @@ info:
     name: WMO Unified Data Policy
     url: https://library.wmo.int/idurl/4/58009
   termsOfService: https://eccc-msc.github.io/open-data/usage-policy/readme_en
-  title: Meteorological Service of Canada Global Discovery Catalogue (GDC) jobs API
+  title: Meteorological Service of Canada Global Discovery Catalogue…
   version: 0.23.3
   x-keywords:
   - wmo
@@ -38,7 +38,7 @@ servers:
 - description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
   url: https://wis2-gdc.weather.gc.ca
 tags:
-- name: jobs
+- name: Jobs
 paths:
   /jobs:
     get:
@@ -53,10 +53,9 @@ paths:
           $ref: '#/components/responses/default'
       summary: Retrieve jobs list
       tags:
-      - jobs
+      - Jobs
   /jobs/{jobId}:
     delete:
-      description: Cancel / delete job
       operationId: deleteJob
       parameters:
       - description: job identifier
@@ -74,9 +73,8 @@ paths:
           $ref: '#/components/responses/default'
       summary: Cancel / delete job
       tags:
-      - jobs
+      - Jobs
     get:
-      description: Retrieve job details
       operationId: getJob
       parameters:
       - description: job identifier
@@ -95,10 +93,9 @@ paths:
           $ref: '#/components/responses/default'
       summary: Retrieve job details
       tags:
-      - jobs
+      - Jobs
   /jobs/{jobId}/results:
     get:
-      description: Retrieve job results
       operationId: getJobResults
       parameters:
       - description: job identifier
@@ -117,8 +114,19 @@ paths:
           $ref: '#/components/responses/default'
       summary: Retrieve job results
       tags:
-      - jobs
+      - Jobs
 components:
+  responses:
+    default:
+      content:
+        application/json:
+          schema:
+            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
+      description: Unexpected error
+    '200':
+      description: successful operation
+    '204':
+      description: no content
   parameters:
     f:
       description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
@@ -134,14 +142,3 @@ components:
         - jsonld
         type: string
       style: form
-  responses:
-    '200':
-      description: successful operation
-    default:
-      content:
-        application/json:
-          schema:
-            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
-      description: Unexpected error
-    '204':
-      description: no content
