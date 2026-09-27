@@ -137,7 +137,7 @@ apis:
     access token obtained via free registration at the WHOS registration portal. Supported views include
     whos-arctic, whos-plata, and the global whos view.
 - aid: wmo:wmo-jobs-api
-  name: World Meteorological Organization jobs API
+  name: World Meteorological Organization Jobs API
   description: The jobs API from World Meteorological Organization — 3 operation(s) for jobs.
   humanURL: https://worldweather.wmo.int/en/dataguide.html
   baseURL: https://worldweather.wmo.int/en/json/
@@ -151,7 +151,7 @@ apis:
   - type: Documentation
     url: https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items
 - aid: wmo:wmo-pywcmp-wis2-wcmp2-ets-api
-  name: World Meteorological Organization pywcmp-wis2-wcmp2-ets API
+  name: World Meteorological Organization Pywcmp Wis2 Wcmp2 Ets API
   description: >-
     The pywcmp-wis2-wcmp2-ets API from World Meteorological Organization — 2 operation(s) for pywcmp-wis2-wcmp2-ets.
   humanURL: https://worldweather.wmo.int/en/dataguide.html
@@ -164,7 +164,7 @@ apis:
   - type: Documentation
     url: https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items
 - aid: wmo:wmo-pywcmp-wis2-wcmp2-kpi-api
-  name: World Meteorological Organization pywcmp-wis2-wcmp2-kpi API
+  name: World Meteorological Organization Pywcmp Wis2 Wcmp2 Kpi API
   description: >-
     The pywcmp-wis2-wcmp2-kpi API from World Meteorological Organization — 2 operation(s) for pywcmp-wis2-wcmp2-kpi.
   humanURL: https://worldweather.wmo.int/en/dataguide.html
@@ -177,7 +177,7 @@ apis:
   - type: Documentation
     url: https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items
 - aid: wmo:wmo-server-api
-  name: World Meteorological Organization server API
+  name: World Meteorological Organization Server API
   description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
   humanURL: https://worldweather.wmo.int/en/dataguide.html
   baseURL: https://worldweather.wmo.int/en/json/
@@ -191,7 +191,7 @@ apis:
   - type: Documentation
     url: https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items
 - aid: wmo:wmo-wis2-discovery-metadata-api
-  name: World Meteorological Organization wis2-discovery-metadata API
+  name: World Meteorological Organization Wis2 Discovery Metadata API
   description: WIS2 discovery metadata
   humanURL: https://worldweather.wmo.int/en/dataguide.html
   baseURL: https://worldweather.wmo.int/en/json/
