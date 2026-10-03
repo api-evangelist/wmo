@@ -116,6 +116,17 @@ paths:
       tags:
       - Jobs
 components:
+  responses:
+    default:
+      content:
+        application/json:
+          schema:
+            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
+      description: Unexpected error
+    '200':
+      description: successful operation
+    '204':
+      description: no content
   parameters:
     f:
       description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
@@ -131,14 +142,3 @@ components:
         - jsonld
         type: string
       style: form
-  responses:
-    '204':
-      description: no content
-    default:
-      content:
-        application/json:
-          schema:
-            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
-      description: Unexpected error
-    '200':
-      description: successful operation
