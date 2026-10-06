@@ -34,7 +34,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wmo.png
 url: https://raw.githubusercontent.com/api-evangelist/wmo/refs/heads/main/apis.yml
 created: '2024-01-01'
-modified: '2026-06-13'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 tags:
   - Weather
@@ -203,6 +203,8 @@ apis:
   - type: Documentation
     url: https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata/items
 common:
+  - url: https://wmo.int/news
+    type: Blog
   - type: AgenticAccess
     url: agentic-access/wmo-agentic-access.yml
   - type: DomainSecurity
