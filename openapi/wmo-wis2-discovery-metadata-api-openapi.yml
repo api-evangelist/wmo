@@ -554,14 +554,18 @@ paths:
       - wis2-discovery-metadata
 components:
   parameters:
-    bbox-crs:
-      description: Indicates the coordinate reference system for the given bbox coordinates.
+    f:
+      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
       explode: false
       in: query
-      name: bbox-crs
+      name: f
       required: false
       schema:
-        format: uri
+        default: json
+        enum:
+        - json
+        - html
+        - jsonld
         type: string
       style: form
     offset:
@@ -574,6 +578,34 @@ components:
         default: 0
         minimum: 0
         type: integer
+      style: form
+    lang:
+      description: The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.
+      in: query
+      name: lang
+      required: false
+      schema:
+        default: en-US
+        enum:
+        - en-US
+        type: string
+    skipGeometry:
+      description: This option can be used to skip response geometries for each feature.
+      explode: false
+      in: query
+      name: skipGeometry
+      required: false
+      schema:
+        default: false
+        type: boolean
+      style: form
+    vendorSpecificParameters:
+      description: Additional "free-form" parameters that are not explicitly defined
+      in: query
+      name: vendorSpecificParameters
+      schema:
+        additionalProperties: true
+        type: object
       style: form
     crs:
       description: Indicates the coordinate reference system for the results.
@@ -598,65 +630,17 @@ components:
         minItems: 4
         type: array
       style: form
-    f:
-      description: The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.
+    bbox-crs:
+      description: Indicates the coordinate reference system for the given bbox coordinates.
       explode: false
       in: query
-      name: f
+      name: bbox-crs
       required: false
       schema:
-        default: json
-        enum:
-        - json
-        - html
-        - jsonld
+        format: uri
         type: string
       style: form
-    vendorSpecificParameters:
-      description: Additional "free-form" parameters that are not explicitly defined
-      in: query
-      name: vendorSpecificParameters
-      schema:
-        additionalProperties: true
-        type: object
-      style: form
-    lang:
-      description: The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.
-      in: query
-      name: lang
-      required: false
-      schema:
-        default: en-US
-        enum:
-        - en-US
-        type: string
-    skipGeometry:
-      description: This option can be used to skip response geometries for each feature.
-      explode: false
-      in: query
-      name: skipGeometry
-      required: false
-      schema:
-        default: false
-        type: boolean
-      style: form
-  responses:
-    Queryables:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/queryables'
-      description: successful queryables operation
   schemas:
-    queryables:
-      properties:
-        queryables:
-          items:
-            $ref: '#/components/schemas/queryable'
-          type: array
-      required:
-      - queryables
-      type: object
     queryable:
       properties:
         description:
@@ -683,3 +667,19 @@ components:
       - queryable
       - type
       type: object
+    queryables:
+      properties:
+        queryables:
+          items:
+            $ref: '#/components/schemas/queryable'
+          type: array
+      required:
+      - queryables
+      type: object
+  responses:
+    Queryables:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/queryables'
+      description: successful queryables operation
