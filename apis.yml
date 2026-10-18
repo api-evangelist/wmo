@@ -94,7 +94,7 @@ apis:
   - WIS2
   - Real-Time
   - MQTT
-  - Pub-Sub
+  - Pub/Sub
   - Notification
   tags_raw:
   - WIS2
